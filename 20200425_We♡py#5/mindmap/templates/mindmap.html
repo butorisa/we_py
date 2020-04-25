@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}main{% endblock %}
+
+{% block content %}
+    <div id="app">
+    <div class="alert alert-warning" role="alert">
+      <h2>Mind Map...</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        {% for item in item_list %}
+        <div class="col-md-3 card" style="width: 18rem; margin:5px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.content }}</p>
+            <button type="button" class="btn btn-outline-info" style="margin-left:80%;">Info</button>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
