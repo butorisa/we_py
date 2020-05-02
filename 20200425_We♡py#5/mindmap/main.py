@@ -15,14 +15,14 @@ def show_mindmap():
 def register():
     if request.method == 'POST':
         # DB登録するオブジェクトを生成
-        target = Item()
+        target = Item(title=request.form['title'], content=request.form['content'])
         # item.no発番
         item_list = Item.get_item(app)
         no = len(item_list)
-
-        target.no = no
-        target.title = request.form['title']
-        target.content = request.form['content']
+        #
+        # target.no = no
+        # target.title = request.form['title']
+        # target.content = request.form['content']
         Item.register_item(app, item=target)
 
         # 画面再表示
