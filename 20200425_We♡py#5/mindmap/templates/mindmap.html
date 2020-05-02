@@ -20,5 +20,23 @@
         {% endfor %}
       </div>
     </div>
+    <!-- 入力フォーム -->
+    <div class="container">
+        <form action="/post" method="post">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Title</span>
+              </div>
+              <input type="text" class="form-control" name="title" aria-label="Title" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">content</span>
+              </div>
+              <textarea class="form-control" name="content" aria-label="With textarea"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-info">submit</button>
+        </form>
+    </div>
   </div>
 {% endblock %}
